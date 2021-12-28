@@ -5,14 +5,13 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Injecting Verbose Client...", -- Required
 	Text = "Your game might lag, please hold.", -- Required
 })
-wait(5)
+if gameId = 4598019433
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/Generic_GUI"))()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Verbose Client Loaded!", -- Required
 	Text = "Thanks for using Verbose Client!", -- Required
 })
         print("VClient SS Enabled!")
-if gameId = 4598019433
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/Generic_GUI"))()
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Script not available yet!", -- Required
