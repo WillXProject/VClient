@@ -11,9 +11,19 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Text = "Thanks for using Verbose Client!", -- Required
 })
         print("VClient SS Enabled!")
-loadstring(game:HttpGet"https://pastebinp.com/raw/eccv9pgu")()
+if gameId = 4598019433
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/Generic_GUI"))()
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Script not available yet!", -- Required
+	Text = "Thanks for using VClient!", -- Required
+})
     elseif answer == "No" then
-        print("Removed VClient :(")
+        print("VClient SS Disabled!")
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Verbose Client Unloaded!", -- Required
+	Text = "Thanks for using Verbose Client!", -- Required
+})
     end
 end
 
