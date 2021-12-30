@@ -34,18 +34,16 @@ Title = "Verbose Client Loaded!", -- Required
 Text = "Thanks for using Verbose Client!", -- Required
 })
 print("VClient SS Enabled!")
-end
-elseif answer == "No" then
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Verbose Client Unloaded!", -- Required
-Text = "Thanks for using Verbose Client!", -- Required
-})
-print("VClient SS Disabled!")
-end
 elseif gameid ~= ("4598019433") and answer == "Yes" then
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Script not available yet!", -- Required
 Text = "Thanks for using VClient!", -- Required
 })
 print("VClient SS not available!")
+elseif answer == "No" then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Verbose Client Unloaded!", -- Required
+Text = "Thanks for using Verbose Client!", -- Required
+})
+print("VClient SS Disabled!")
 end
