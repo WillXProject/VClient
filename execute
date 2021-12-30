@@ -1,5 +1,5 @@
 local player = game:GetService("Players"):GetPlayerByUserId(2033825399, 317901955)
-local gameid = game.PlaceId
+local gameid = 4598019433
 local Bindable = Instance.new("BindableFunction")
 Bindable.OnInvoke = Callback
 function Callback(answer)
@@ -16,7 +16,7 @@ Button1 = "Yes";
 Button2 = "No";
 Callback = Bindable
 })
-else
+elseif not player then
 game:GetService("StarterGui"):SetCore("SendNotification", {
 Title = "Cheqer";
 Text = "Access not found! - Sorry!";
@@ -34,16 +34,18 @@ Title = "Verbose Client Loaded!", -- Required
 Text = "Thanks for using Verbose Client!", -- Required
 })
 print("VClient SS Enabled!")
-elseif gameid ~= ("4598019433") and answer == "Yes" then
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Script not available yet!", -- Required
-Text = "Thanks for using VClient!", -- Required
-})
-print("VClient SS not available!")
-elseif answer == "No" then
+end
+if answer == "No" then
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Verbose Client Unloaded!", -- Required
 Text = "Thanks for using Verbose Client!", -- Required
 })
 print("VClient SS Disabled!")
+end
+if gameid ~= ("4598019433") and answer == "Yes" then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Script not available yet!", -- Required
+Text = "Thanks for using VClient!", -- Required
+})
+print("VClient SS not available!")
 end
