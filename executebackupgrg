@@ -1,0 +1,43 @@
+local player = game:GetService("Players"):GetPlayerByUserId(2033825399, 317901955)
+local Bindable = Instance.new("BindableFunction")
+Bindable.OnInvoke = Callback
+function Callback(answer)
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Cheqer", -- Required
+Text = "Checking Access...", -- Required
+})
+if player then
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "Cheqer";
+Text = "Access found! - Would you like to inject?";
+Button1 = "Yes";
+Button2 = "No";
+Callback = Bindable
+})
+elseif not player then
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "Cheqer";
+Text = "Access not found! - Sorry!";
+Button1 = ":(";
+})
+end
+if answer == "Yes" then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Injecting Verbose Client...", -- Required
+Text = "Your game might lag, please hold.", -- Required
+})
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/Generic_GUI"))()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Verbose Client Loaded!", -- Required
+Text = "Thanks for using Verbose Client!", -- Required
+})
+print("VClient SS Enabled!")
+end
+if answer == "No" then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Verbose Client Unloaded!", -- Required
+Text = "Thanks for using Verbose Client!", -- Required
+})
+print("VClient SS Disabled!")
+end
