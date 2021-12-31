@@ -1,5 +1,5 @@
 local player = game:GetService("Players"):GetPlayerByUserId(2033825399, 317901955)
-local gameid = 4598019433
+local gameid = game.PlaceId
 local Bindable = Instance.new("BindableFunction")
 Bindable.OnInvoke = Callback
 function Callback(answer)
